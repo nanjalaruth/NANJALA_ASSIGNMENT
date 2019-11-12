@@ -1,0 +1,5 @@
+def DNA():
+    dna = list('GACGATATAAAAAAAAAACGACGAAAAATA')
+    return(len(set('GACGATATAAAAAAAAAACGACGAAAAATA')))
+    
+DNA()

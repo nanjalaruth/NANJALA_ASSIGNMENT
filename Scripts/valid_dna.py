@@ -16,7 +16,23 @@ def isvalidDNA(s):
             print("There is an invalid base %s at position %d" % (base,s.find(base)))     
     return(valid)
 
-    if isvalidDNA(testdna)==True:
-        print(percentageGC(testdna))
-    else:
-        print("Enter valid DNA sequence")
+isvalidDNA(testdna)
+
+if isvalidDNA(testdna)==True:
+    print(percentageGC(testdna))
+else:
+    print("Enter valid DNA sequence")
+    
+isvalidDNA(mydna)
+        
+if isvalidDNA(mydna)==True:
+    print(percentageGC(mydna))
+else:
+    print("Enter valid DNA sequence")
+    
+isvalidDNA(yourdna)
+        
+if isvalidDNA(yourdna)==True:
+    print(percentageGC(yourdna))
+else:
+    print("Enter valid DNA sequence")

@@ -1,6 +1,6 @@
 def AtmTransactions():
     acountbal = 50000
-    choice = input("Please enter 'b' to check balance, 'd' to deposit or 'w' to withdraw: ")
+    choice = input("Please enter 'b' to check balance, 'd' to deposit, 'w' to withdraw or 'q' to quit: ")
     while choice != 'q':
         if choice.lower() in ('w','d','b'):
             if choice.lower() == 'b':
@@ -10,6 +10,7 @@ def AtmTransactions():
                 print(choice.lower())
             elif choice.lower() == 'd':
                 deposit = float(input("Enter amount to deposit:"))
+                acountbal = acountbal + deposit
                 print("Anything else?")
                 choice = input("Enter b for balance, w to withdraw, d to deposit or q to quit: ")
                 print(choice.lower())
@@ -25,5 +26,5 @@ def AtmTransactions():
         else:
             print("Wrong choice!")
             choice = input("Please enter 'b' to check balance, 'd' to deposit or 'w' to withdraw: ")
-
+            
 AtmTransactions()
