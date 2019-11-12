@@ -3,9 +3,6 @@ import sys
 gene_file = sys.argv[1]
 out_file = sys.argv[2]
 
-print(gene_file)
-print(out_file)
-
 def getGenelist():
     with open(gene_file,'r')as humchr:
         tag = False
@@ -21,18 +18,22 @@ def getGenelist():
                     else:
                         gene_list.append(line_split[0])
         return gene_list[3:][:-2]
-        
+    
+clean_gene_list = getGenelist()
+    
 def writeGenelist(clean_gene_list):
-    with open('out_file','w')as gene_names:
+    with open(out_file,'w')as gene_names:
         for gene in clean_gene_list:
             gene_names.writelines(gene+'\n')
     print('Genes have been written successfully')
     
-if len(sys.argv)<3:
-    print(_doc_)
+writeGenelist('../Data/gene_names.txt')
+
+if len(sys.argv) <3:    ##provides the user when importing the specifications of your module
+    print(_Doc_)
 else:
-    
-    gene_file = sys.argv
-    out_file = sys.argv
-    clean_gene_list = getGenelist(gene_file)
-    writeGenelist(clean_gene_list,out_file)
+    print()
+    gene_file = sys.argv[1]
+    out_file = sys.argv[2]
+    clean_gene_list = getGenelist()
+    writeGenelist(clean_gene_list)
