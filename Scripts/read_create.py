@@ -1,8 +1,5 @@
 import sys
 
-gene_file = sys.argv[1]
-out_file = sys.argv[2]
-
 def getGenelist():
     with open(gene_file,'r')as humchr:
         tag = False
@@ -17,7 +14,7 @@ def getGenelist():
                         continue
                     else:
                         gene_list.append(line_split[0])
-        return gene_list[3:][:-2]
+        print(gene_list[3:][:-2])
         
 def writeGenelist(clean_gene_list):
     with open('out_file','w')as gene_names:

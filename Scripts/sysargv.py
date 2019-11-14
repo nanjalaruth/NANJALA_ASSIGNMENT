@@ -1,3 +1,4 @@
+
 import sys
 
 gene_file = sys.argv[1]
@@ -29,11 +30,14 @@ def writeGenelist(clean_gene_list):
     
 writeGenelist('../Data/gene_names.txt')
 
-if len(sys.argv) <3:    ##provides the user when importing the specifications of your module
-    print(_Doc_)
-else:
-    print()
-    gene_file = sys.argv[1]
-    out_file = sys.argv[2]
-    clean_gene_list = getGenelist()
-    writeGenelist(clean_gene_list)
+print(gene_file)
+print(out_file)
+
+#if len(sys.argv) <3:    ##provides the user when importing the specifications of your module
+#    print(_Doc_)
+#else:
+#    print()
+#   gene_file = sys.argv[1]
+#    out_file = sys.argv[2]
+#    clean_gene_list = getGenelist()
+#    writeGenelist(clean_gene_list)
