@@ -146,6 +146,8 @@ def writeGenelist(clean_gene_list):
             gene_names.writelines(gene+'\n')
             
 print("Genes have been written successfully")
+
+writeGenelist(clean_gene_list)
     
 def DNA_4letters():
     dna = list('GACGATATAAAAAAAAAACGACGAAAAATA')
